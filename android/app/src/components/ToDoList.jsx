@@ -3,18 +3,38 @@ import { ScrollView, Text, StyleSheet } from 'react-native';
 
 const ToDoList = () => {
   return (
-    <ScrollView style={styles.container}>
-      <Text>Go to the grocery store</Text>
-      <Text>Do homework</Text>
-      {/* ... */}
+    <ScrollView>
+        <Pressable>
+            <View style={[styles.task, styles.completed]}>
+                <Text style={[styles.taskText]}>Clean room</Text>
+            </View>
+        </Pressable>
+        <Pressable>
+            <View style={[styles.task, styles.completed]}>
+                <Text style={[styles.taskText]}>Take a shower</Text>
+            </View>
+        </Pressable>
+         <Pressable>
+            <View style={[styles.task, styles.completed]}>
+                <Text style={[styles.taskText]}>Go grocery shopping</Text>
+            </View>
+         </Pressable>
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
+    task: {
+      padding: 10,
+      borderBottomWidth: 1,
+      borderColor: '##ff0397',
+    },
+    completed: {
+      backgroundColor: '#ead1dc',
+    },
+    taskText: {
+      fontSize: 16,
+    },
 });
 
 export default ToDoList;

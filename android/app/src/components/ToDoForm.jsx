@@ -3,24 +3,31 @@ import { View, TextInput, Button, StyleSheet } from 'react-native';
 
 const ToDoForm = () => {
   return (
-    <View style={styles.container}>
-      <TextInput style={styles.input} placeholder="Enter task" />
-      <Button title="Add Task" onPress={() => {}} />
+    <View style={styles.form}>
+        <TextInput
+            style={styles.input}
+            placeholder="Add a new task..."
+        />
+        <Button title="Add" />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  form: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    margin: 10,
+    marginHorizontal: 20,
+    marginTop: 20,
   },
   input: {
     flex: 1,
     borderWidth: 1,
+    borderColor: '##ff0397',
+    paddingHorizontal: 10,
+    paddingVertical: 5,
     marginRight: 10,
-    padding: 8,
   },
 });
 
