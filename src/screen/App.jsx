@@ -20,6 +20,10 @@ function App() {
         'Go grocery shopping'
     ]);
 
+    const addTask = (taskText) => {
+        setTasks([...tasks, taskText])
+    };
+
     return (
         <SafeAreaView>
                <h1>My Amazing To-Do App </h1>
